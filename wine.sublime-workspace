@@ -1,0 +1,801 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"r",
+				"readfile\tRead File Into Vector"
+			],
+			[
+				"std",
+				"std"
+			],
+			[
+				"temp",
+				"tempstack"
+			],
+			[
+				"vect",
+				"vewctor"
+			],
+			[
+				"make_",
+				"make_water"
+			],
+			[
+				"lam",
+				"lamdax"
+			],
+			[
+				"cal",
+				"cal1a"
+			],
+			[
+				"push",
+				"push_back"
+			],
+			[
+				"e",
+				"ex"
+			],
+			[
+				"p",
+				"push_back"
+			],
+			[
+				"PLL",
+				"PLL_32M"
+			],
+			[
+				"inti",
+				"IO_inits"
+			],
+			[
+				"init",
+				"PIT_inits"
+			],
+			[
+				"PITL",
+				"PITLD1"
+			],
+			[
+				"PITLD",
+				"PITLD0"
+			],
+			[
+				"PIT",
+				"PITCE_PCE0"
+			],
+			[
+				"PITCE_",
+				"PITCE_PCE1"
+			],
+			[
+				"PITC",
+				"PITCE_PCE0"
+			],
+			[
+				"LED2",
+				"LED2_DIR"
+			],
+			[
+				"LED1",
+				"LED1_DIR"
+			],
+			[
+				"L",
+				"L298N_IN2"
+			],
+			[
+				"L298",
+				"L298N_IN1"
+			],
+			[
+				"PWME",
+				"PWME_PWME7"
+			],
+			[
+				"PRE",
+				"PressTime"
+			],
+			[
+				"Press",
+				"PressTime"
+			],
+			[
+				"L29",
+				"L298N_EN"
+			],
+			[
+				"opencv",
+				"opencv_core242d"
+			],
+			[
+				"dataS",
+				"dataSetSize"
+			],
+			[
+				"meth",
+				"method2"
+			],
+			[
+				"reco",
+				"record4"
+			],
+			[
+				"goal",
+				"goal"
+			],
+			[
+				"w",
+				"weight"
+			],
+			[
+				"last",
+				"last_time_sum"
+			],
+			[
+				"p_bu",
+				"P_buy"
+			],
+			[
+				"p_se",
+				"p_sell"
+			],
+			[
+				"W",
+				"W_get"
+			],
+			[
+				"star",
+				"start_time"
+			],
+			[
+				"start",
+				"start_time"
+			],
+			[
+				"sta",
+				"start_time"
+			],
+			[
+				"strin",
+				"stringToNum"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"pr",
+				"pre_score"
+			],
+			[
+				"str",
+				"string.h\tstandard header"
+			],
+			[
+				"i",
+				"id"
+			],
+			[
+				"for",
+				"for_\tFor Loop"
+			],
+			[
+				"Load",
+				"LoadSpamWord"
+			],
+			[
+				"Coun",
+				"CountSpamWord"
+			],
+			[
+				"spa",
+				"spamfreq"
+			],
+			[
+				"lo",
+				"LoadSpamWord"
+			],
+			[
+				"Lo",
+				"LoadSpamWord"
+			],
+			[
+				"Count",
+				"CountSpamWord"
+			],
+			[
+				"IsL",
+				"IsCapLet"
+			],
+			[
+				"ConPh",
+				"ConPhoneHam"
+			],
+			[
+				"ConP",
+				"ConPhoneSpam"
+			],
+			[
+				"end",
+				"endl"
+			],
+			[
+				"ConW",
+				"ConWebHam"
+			],
+			[
+				"ConCa",
+				"ConCapWordSHam"
+			],
+			[
+				"ConCap",
+				"ConCapWordSpam"
+			],
+			[
+				"ConSpe",
+				"ConSpeSymHam"
+			],
+			[
+				"ConspeS",
+				"ConSpeSymSpam"
+			],
+			[
+				"Ex",
+				"ExistPhone"
+			],
+			[
+				"Exis",
+				"ExistPhone"
+			],
+			[
+				"ConWeb",
+				"ConWebSpam"
+			],
+			[
+				"ConCapW",
+				"ConCapWordSHam"
+			],
+			[
+				"ConC",
+				"CountCapWord"
+			],
+			[
+				"ComH",
+				"ConHam"
+			],
+			[
+				"ConS",
+				"ConSpam"
+			],
+			[
+				"ConSpam",
+				"ConSpeSymSpam"
+			],
+			[
+				"Spe",
+				"SpecialSymbol"
+			],
+			[
+				"con_",
+				"con_ham"
+			],
+			[
+				"Co",
+				"CountSpeSym"
+			],
+			[
+				"F",
+				"FirstRead"
+			],
+			[
+				"spaw",
+				"spamword"
+			],
+			[
+				"begi",
+				"begin"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"be",
+				"begin"
+			],
+			[
+				"spam",
+				"spamword"
+			],
+			[
+				"coun",
+				"CountSpamWord"
+			],
+			[
+				"Spa",
+				"spamword"
+			],
+			[
+				"IsSp",
+				"IsSpamWord"
+			],
+			[
+				"out",
+				"outFile"
+			],
+			[
+				"mes",
+				"message"
+			],
+			[
+				"count",
+				"CountWord"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"prev",
+				"prevteam"
+			],
+			[
+				"pre",
+				"prevteam"
+			],
+			[
+				"findprev",
+				"findprevlocal"
+			],
+			[
+				"latest",
+				"latestlocal"
+			],
+			[
+				"lates",
+				"latesttime"
+			],
+			[
+				"leat",
+				"latestteam"
+			],
+			[
+				"mxGet",
+				"mxGetPr"
+			],
+			[
+				"b",
+				"b"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 257.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"romove",
+				"Package Control: Remove Package"
+			],
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"conda",
+				"Conda: List Packages"
+			],
+			[
+				"UTF",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"UFT",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				":form",
+				"CoolFormat: Quick Format"
+			],
+			[
+				":savea",
+				"Project: Save As"
+			],
+			[
+				":save",
+				"Project: Save As"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":q",
+				"CoolFormat: Quick Format"
+			],
+			[
+				"matlab",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"Matlab",
+				"SublimeREPL: Matlab"
+			],
+			[
+				"Color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Colorsub",
+				"Colorsublime: Browse Themes Online"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: rom",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: eo",
+				"Package Control: Remove Package"
+			],
+			[
+				":alignment",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 565.0
+	},
+	"console":
+	{
+		"height": 290.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/TEMP/wine/sql"
+	],
+	"file_history":
+	[
+		"/E/TEMP/wine/sql/gui.py",
+		"/D/PROGRAM/Algroithm/define.cpp",
+		"/E/重要文件/学校/课件/单片机/藕舫/数码管和矩阵键盘/按键IAP15F2K61S2/KKEY4x4/SMG.c",
+		"/D/PROGRAM/POJ/1476/1476.cpp",
+		"/D/PROGRAM/CF/416C.cpp",
+		"/E/重要文件/学校/课件/单片机/藕舫/第一次课程/第一次课的测试程序/example/example.c",
+		"/D/PROGRAM/MCU/example/lat.c",
+		"/D/PROGRAM/Algroithm/线段树/线段树.cpp",
+		"/D/PROGRAM/POJ/3264/3264.cpp",
+		"/D/PROGRAM/Algroithm/TSP/模拟退火/TSP模拟退火算法2.cpp",
+		"/D/PROGRAM/VJ/1.cpp",
+		"/D/PROGRAM/Project/Graph/Dijkstra.cpp",
+		"/D/PROGRAM/POJ/3264",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/D/PROGRAM/Algroithm/suffix expression.cpp",
+		"/D/PROGRAM/TEST/sun4.cpp",
+		"/D/PROGRAM/TEST/sun3.cpp",
+		"/D/PROGRAM/TEST/sun2.cpp",
+		"/D/PROGRAM/TEST/sun1.cpp",
+		"/C/Users/XIAOMI/Desktop/hosts",
+		"/C/Users/XIAOMI/Desktop/total-conversion-build.user.js",
+		"/D/PROGRAM/TEST/sun.cpp",
+		"/D/PROGRAM/TSOJ/1372/1372.cpp",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/User/C++.sublime-build",
+		"/D/PROGRAM/Algroithm/tree.cpp",
+		"/D/PROGRAM/TEST/tt.cpp",
+		"/D/PROGRAM/TEST/buzhang.cpp",
+		"/D/PROGRAM/Algroithm/treetest.cpp",
+		"/E/KSWJJ/24000001/modi1.c",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/SublimeAStyleFormatter/Default (Windows).sublime-keymap",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/User/SublimeAStyleFormatter.sublime-settings",
+		"/D/PROGRAM/TSOJ/1296/1296.cpp",
+		"/D/PROGRAM/Vijos/1848/1848.cpp",
+		"/D/PROGRAM/TEST/asdad.cpp",
+		"/D/PROGRAM/TEST/string.cpp",
+		"/D/PROGRAM/TEST/sffssefsef.cpp",
+		"/D/PROGRAM/TEST/test123.cpp",
+		"/D/PROGRAM/Project/2018高教社杯/mex.cpp",
+		"/D/PROGRAM/Project/2014校赛A工厂污染/main.cpp",
+		"/D/PROGRAM/Project/2018高教社杯/main.cpp",
+		"/D/PROGRAM/TEST/testasdasdad.cpp",
+		"/D/PROGRAM/Baikeyuan/3-1.cpp",
+		"/D/PROGRAM/Project/Auto Car/main.cpp",
+		"/D/PROGRAM/Project/Auto Car/NS_model.m",
+		"/D/PROGRAM/Project/热水泡澡问题/pid.cpp",
+		"/D/PROGRAM/Project/热水泡澡问题/main.cpp",
+		"/D/PROGRAM/Project/热水泡澡问题",
+		"/D/PROGRAM/TEST/installKag.py",
+		"/D/QQ/消息记录/2481532651/FileRecv/readstl/map_generate/stl_read.cpp",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/Anaconda/README.md",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/Conda/Conda (Windows).sublime-settings",
+		"/D/PROGRAM/Project/迷宫难度/f.cpp",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/User/Conda (Windows).sublime-settings",
+		"/D/PROGRAM/TEST/test.cpp",
+		"/D/PROGRAM/TEST/f.cpp",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/D/PROGRAM/TEST/cal.cpp",
+		"/D/PROGRAM/TSOJ/game/6.cpp",
+		"/D/PROGRAM/TSOJ/game/4.cpp",
+		"/D/PROGRAM/TSOJ/game/3.cpp",
+		"/D/PROGRAM/TSOJ/game/2.cpp",
+		"/D/PROGRAM/TSOJ/game/1.cpp",
+		"/D/PROGRAM/Project/降维/Cpp2.cpp",
+		"/E/重要文件/学校/课件/数学建模/微积分方程问题/污染扩散问题/Cpp1.cpp",
+		"/D/PROGRAM/Project/随机规划供应商/goalfun.cpp",
+		"/D/PROGRAM/Project/51/p1.cpp",
+		"/D/PROGRAM/Project/碎纸拼接/附件一/Dijkstra.cpp",
+		"/E/重要文件/学校/多火/污染聚类/Cpp1.cpp",
+		"/D/PROGRAM/Project/Diangong/2.R",
+		"/D/PROGRAM/MCU/Work/test.cpp",
+		"/D/PROGRAM/MCU/Work/lajituzhuang.c",
+		"/C/Users/XIAOMI/Desktop/基础实验例程/实验1：点亮第一个LED/程序/main.c",
+		"/E/重要文件/学校/课件/单片机/05PWM/05PWM/demopwm/Sources/main.c",
+		"/E/重要文件/学校/课件/单片机/06AD/06AD/demoad/Sources/main.c",
+		"/D/PROGRAM/TEST/test.py",
+		"/D/PROGRAM/Algroithm/bubble_sort/buddle_sort.c",
+		"/E/重要文件/学校/课件/单片机/04PT7/04PT7/demopt7/Sources/main.c",
+		"/E/重要文件/学校/课件/单片机/03PIT/03PIT/demopit/Sources/main.c",
+		"/E/重要文件/学校/课件/单片机/01PLL/01PLL/demopll/Sources/main.c",
+		"/C/Users/XIAOMI/Desktop/MCU/01PLL/01PLL/demopll/Sources/main.c",
+		"/D/PROGRAM/TEST/Cpp2.cpp",
+		"/D/PROGRAM/TEST/1t.cpp",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Python/Default.sublime-commands",
+		"/E/D/PyCharm 2018.1.4/bin/pycharm64.exe.vmoptions",
+		"/E/D/PyCharm 2018.1.4/bin/pycharm.exe.vmoptions",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/Dev-Cpp/PROGRAM/TEST/test.py",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/MATLAB/Project/Diangong/3.cpp",
+		"/D/MATLAB/Project/Diangong/2.cpp",
+		"/D/Dev-Cpp/PROGRAM/Algroithm/grpah/graph_search.cpp",
+		"/D/Dev-Cpp/PROGRAM/TSOJ/1358/1358.cpp",
+		"/D/Dev-Cpp/PROGRAM/Algroithm/push结构体.cpp",
+		"/D/MATLAB/Project/酒驾/SA拟合函数.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/未命名2.cpp",
+		"/D/Dev-Cpp/PROGRAM/Algroithm/SA/TSP模拟退火算法.cpp",
+		"/D/Dev-Cpp/PROGRAM/Algroithm/TSP/TSP模拟退火算法.cpp",
+		"/D/Dev-Cpp/PROGRAM/POJ/2251/2251.cpp",
+		"/D/MATLAB/Project/Graph/Dijkstra.cpp",
+		"/D/Dev-Cpp/PROGRAM/POJ/1321.cpp",
+		"/D/Dev-Cpp/PROGRAM/TSOJ/1293/1293.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/score.cpp",
+		"/D/Dev-Cpp/PROGRAM/TSOJ/1176/1176.cpp",
+		"/C/Users/XIAOMI/AppData/Roaming/Sublime Text 3/Packages/C++ Snippets/README.md",
+		"/D/Dev-Cpp/PROGRAM/TSOJ/1463/1463.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/test.cpp",
+		"/D/MATLAB/Project/SchoolGame/rand.r",
+		"/D/MATLAB/Project/SchoolGame/RDO.R",
+		"/D/MATLAB/Project/SchoolGame/prep.cpp",
+		"/D/Dev-Cpp/PROGRAM/Vijos/1648/1648.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/count.cpp",
+		"/D/Dev-Cpp/PROGRAM/TSOJ/1422/1422.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/Cpp2.dsw",
+		"/C/Users/XIAOMI/Downloads/ASA/asa_usr.h",
+		"/C/Users/XIAOMI/Downloads/ASA-30.5/ASA/asa_usr.c",
+		"/C/Users/XIAOMI/Downloads/ASA/asa_usr.c",
+		"/D/MATLAB/Project/Work/蒙特卡洛问题/queue.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/未命名23.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/Cpp2.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/tes123123t.cpp",
+		"/D/Dev-Cpp/PROGRAM/Algroithm/TSP/TSP模拟退火算法2.cpp",
+		"/D/Dev-Cpp/PROGRAM/TEST/未命名4003.cpp",
+		"/C/Users/XIAOMI/Downloads/ASA/asa_usr_asa.h",
+		"/C/Users/XIAOMI/Downloads/ASA-28.1/ASA/asa_usr.c"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 48.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/C++.sublime-build",
+	"project": "wine.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"1358",
+				"PROGRAM\\TSOJ\\1358\\1358.cpp"
+			],
+			[
+				"push",
+				"PROGRAM\\Algroithm\\push结构体.cpp"
+			],
+			[
+				"1293",
+				"TSOJ\\1293\\1293.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 176.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
