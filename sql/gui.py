@@ -4,8 +4,8 @@
 import sys
 from PySide2.QtWidgets import *
 from PySide2.QtCore import *
-import sqlite3
-import PyQt5
+# import sqlite3
+# import PyQt5
 
 
 class Form(QDialog):
@@ -33,7 +33,6 @@ class Form(QDialog):
 
 if __name__ == '__main__':
     print("My word")
-    print(value, ..., sep, end, file, flush)
     print()
     print()
     #app = QApplication.instance()
