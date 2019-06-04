@@ -12,35 +12,50 @@ import os
 """
 
 
-def make_wine_base_kw(wine_id='auto',
-                      wine_type='NULL',
-                      wine_num=0,
-                      store_id='NULL'):
-    return locals()
+class make_record():
+    def __init__(self, table, **kw):
+        self.data = None
+        self.primary = None
+        if table == 'wine':
+            self.data = self.make_wine_kw(**kw)
+            self.primary = 'wine_id'
+        elif table == 'score':
+            self.data = self.make_score_kw(**kw)
+            self.primary = 'wine_id'
+        elif table == 'store':
+            self.data = self.make_store_kw(**kw)
+            self.primary = 'store_id'
+
+        self.data.pop('self')
+
+    def make_wine_kw(self, wine_id='auto',
+                     wine_type=None,
+                     wine_num=0,
+                     store_id=None):
+        return locals()
+
+    def make_score_kw(self, wine_id='auto',
+                      appear_clarity=None,
+                      appear_tone=None,
+                      appear_pureness=None,
+                      aroma_pureness=None,
+                      aroma_concentration=None,
+                      aroma_quality=None,
+                      taste_pureness=None,
+                      taste_concentration=None,
+                      taste_persistence=None,
+                      taste_quality=None):
+        return locals()
+
+    def make_store_kw(self, store_id='auto',
+                      store_address=None,
+                      store_temperature=None,
+                      store_moisture=None):
+        return locals()
 
 
-def make_wine_score_kw(wine_id='auto',
-                       appear_clarity='NULL',
-                       appear_tone='NULL',
-                       appear_pureness='NULL',
-                       aroma_pureness='NULL',
-                       aroma_concentration='NULL',
-                       aroma_quality='NULL',
-                       taste_pureness='NULL',
-                       taste_concentration='NULL',
-                       taste_persistence='NULL',
-                       taste_quality='NULL'):
-    return locals()
-
-
-def make_store_kw(store_id='NULL',
-                  store_address='NULL',
-                  store_temperature='NULL',
-                  store_moisture='NULL'):
-    return locals()
-
-
-def make_command(operation, table, data):
+def make_command(operation, table, record):
+    data = record.data
     if operation == "insert":
         field = data.keys()
         block1 = ','.join(field)
@@ -49,16 +64,22 @@ def make_command(operation, table, data):
             table +\
             ' (%s)' % (block1) +\
             ' values(%s)' % (block2)
-    else:
+    elif operation == 'update':
         field = data.keys()
         value = data.values()
-        block1 = ','.join(list(map(lambda a, b: str(a) + '=' + "'%s'" % str(b),
-                                   field, value)))
+        block1 = str(','.join(list(map(lambda a, b: str(a) + '=' + "'%s'" % str(b),
+                                       field, value))))
+        block1 = block1.replace("'None'", 'null')
         command = 'update ' +\
             table +\
             ' set ' +\
             block1 +\
-            ' where wine_id==%s' % (data['wine_id'])
+            ' where %s==%s' % (record.primary, data[record.primary])
+    elif operation == 'delete':
+        command = 'delete from ' +\
+            table + ' where ' + \
+            '%s==%s' % (record.primary, data[record.primary])
+
     return command
 
 
@@ -67,32 +88,38 @@ class wine():
         # 初始化创建表，如果表存在则跳过
         self.conn = sqlite3.connect(file)
         self.cursor = self.conn.cursor()
+        self.base_keys = ['wine_id', 'wine_type', 'wine_num', 'store_id']
+        self.score_keys = [wine_id, appear_clarity,
+                           appear_tone, appear_pureness]
+        self.store_keys = []
         try:
             self.cursor.execute('create table store\
                                 (\
-                                    store_id varchar(20) primary key,\
+                                    store_id varchar(20) not null primary key,\
                                     store_address varchar(20) not null,\
                                     store_temperature real,\
                                     store_moisture real\
                                 )')
         except:
+            print("Error create store")
             pass
         try:
             self.cursor.execute('create table base\
                                 (\
-                                    wine_id varchar(20) primary key,\
+                                    wine_id varchar(20) not null primary key,\
                                     wine_type varchar(20) not null,\
                                     wine_num int not null,\
                                     store_id varchar(20) not null,\
                                     foreign key(store_id) references store(store_id)\
                                 )')
         except:
+            print("Error create base")
             pass
 
         try:
             self.cursor.execute('create table score\
                                 (\
-                                    wine_id varchar(20) primary key,\
+                                    wine_id varchar(20) not null primary key,\
                                     appear_clarity int,\
                                     appear_tone int,\
                                     appear_pureness int,\
@@ -106,35 +133,8 @@ class wine():
                                     foreign key(wine_id) references base(wine_id)\
                                 )')
         except:
+            print("Error create score")
             pass
-
-    def add_base(self, base):
-        if base['wine_id'] == 'auto':
-            # 自动增加id（建议）
-            self.cursor.execute('select wine_id from base')
-            value = self.cursor.fetchall()
-            if value != []:
-                base['wine_id'] = int(max(value)[0]) + 1
-            else:
-                base['wine_id'] = 0
-
-        command = make_command('insert', 'base', base)
-        self.cursor.execute(command, tuple(base.values()))
-
-    def change_base(self, base):
-        command = make_command('update', 'base', base)
-        self.cursor.execute(command)
-
-    def add_score(self, score):
-        command = make_command('insert', 'score', score)
-        self.cursor.execute(command, tuple(score.values()))
-
-    def change_score(self, score):
-        command = make_command('update', 'score', score)
-        self.cursor.execute(command)
-
-    def add_store():
-        pass
 
     def select_all(self):
         print("Base:")
@@ -155,7 +155,8 @@ class wine():
         for i in value:
             print(i)
 
-    def add(self, table, data):
+    def add(self, table, record):
+        data = record.data
         if table == 'base':
             if data['wine_id'] == 'auto':
                 # 自动增加id（建议）
@@ -176,8 +177,20 @@ class wine():
                 else:
                     data['store_id'] = 0
 
-        command = make_command('insert', table, data)
-        self.cursor.execute(command, tuple(data.values()))
+        self.__insert(table, record)
+
+    def __insert(self, table, record):
+        command = make_command('insert', table, record)
+        self.cursor.execute(command, tuple(record.data.values()))
+
+    def delete(self, table, record):
+        command = make_command('delete', table, record)
+        self.cursor.execute(command)
+
+    def update(self, table, record):
+        command = make_command('update', table, record)
+        print(command)
+        self.cursor.execute(command)
 
     def close(self):
         self.cursor.close()
@@ -187,10 +200,16 @@ class wine():
 
 os.remove('test.db')
 c = wine()
-first = make_store_kw(store_address='place1')
+first = make_record('store', store_address='place1', store_id='2')
+print(make_record('score').data.keys())
+sec = make_record('store', store_address='place2')
 c.add('store', first)
-#first = make_wine_base_kw(wine_id=2, wine_type='yellow', wine_num=7)
-#ans = c.change_base(first)
-# if ans == 0:
+c.add('store', sec)
+c.select_all()
+sec.data['store_address'] = 'place5'
+print(sec.data)
+c.update('store', sec)
+c.select_all()
+c.delete('store', first)
 c.select_all()
 c.close()
