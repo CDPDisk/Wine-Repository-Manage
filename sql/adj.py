@@ -16,7 +16,8 @@ class make_record():
     def __init__(self, table, **kw):
         self.data = None
         self.primary = None
-        if table == 'wine':
+        self.table = table
+        if table == 'base':
             self.data = self.make_wine_kw(**kw)
             self.primary = 'wine_id'
         elif table == 'score':
@@ -88,10 +89,15 @@ class wine():
         # 初始化创建表，如果表存在则跳过
         self.conn = sqlite3.connect(file)
         self.cursor = self.conn.cursor()
-        self.base_keys = ['wine_id', 'wine_type', 'wine_num', 'store_id']
-        self.score_keys = [wine_id, appear_clarity,
-                           appear_tone, appear_pureness]
-        self.store_keys = []
+        base_keys = ['wine_id', 'wine_type', 'wine_num', 'store_id']
+        score_keys = ['wine_id', 'appear_clarity', 'appear_tone', 'appear_pureness',
+                      'aroma_pureness', 'aroma_concentration', 'aroma_quality',
+                      'taste_pureness', 'taste_concentration', 'taste_persistence', 'taste_quality']
+        store_keys = ['store_id', 'store_address',
+                      'store_temperature', 'store_moisture']
+        self.keys = {'score': score_keys,
+                     'base': base_keys,
+                     'store': store_keys}
         try:
             self.cursor.execute('create table store\
                                 (\
@@ -152,10 +158,12 @@ class wine():
         print("Store:")
         self.cursor.execute('select * from store')
         value = self.cursor.fetchall()
+        # print(value)
         for i in value:
             print(i)
 
-    def add(self, table, record):
+    def add(self, record):
+        table = record.table
         data = record.data
         if table == 'base':
             if data['wine_id'] == 'auto':
@@ -165,7 +173,7 @@ class wine():
                 if value != []:
                     data['wine_id'] = int(max(value)[0]) + 1
                 else:
-                    data['wine_id'] = 0
+                    data['wine_id'] = 10000
 
         if table == 'store':
             if data['store_id'] == 'auto':
@@ -175,41 +183,47 @@ class wine():
                 if value != []:
                     data['store_id'] = int(max(value)[0]) + 1
                 else:
-                    data['store_id'] = 0
+                    data['store_id'] = 100
+        # print(data)
+        self.__insert(record)
 
-        self.__insert(table, record)
-
-    def __insert(self, table, record):
+    def __insert(self, record):
+        table = record.table
         command = make_command('insert', table, record)
         self.cursor.execute(command, tuple(record.data.values()))
 
-    def delete(self, table, record):
+    def delete(self, record):
+        table = record.table
         command = make_command('delete', table, record)
         self.cursor.execute(command)
 
-    def update(self, table, record):
+    def update(self, record):
+        table = record.table
         command = make_command('update', table, record)
         print(command)
         self.cursor.execute(command)
 
+    def select(self, table):
+        self.cursor.execute("select * from " + table)
+        return self.cursor.fetchall()
+
     def close(self):
+        print("Save done")
         self.cursor.close()
         self.conn.commit()
         self.conn.close()
 
 
-os.remove('test.db')
-c = wine()
-first = make_record('store', store_address='place1', store_id='2')
-print(make_record('score').data.keys())
-sec = make_record('store', store_address='place2')
-c.add('store', first)
-c.add('store', sec)
-c.select_all()
-sec.data['store_address'] = 'place5'
-print(sec.data)
-c.update('store', sec)
-c.select_all()
-c.delete('store', first)
-c.select_all()
-c.close()
+# os.remove('test.db')
+# c = wine()
+# r1 = make_record('store', store_address='place1')
+# r2 = make_record('store', store_address='place2')
+# c.add(r1)
+# c.add(r2)
+
+# r1 = make_record('base', wine_type='type1', wine_num=1, store_id='100')
+# r2 = make_record('base', wine_type='type1', wine_num=2, store_id='101')
+# c.add(r1)
+# c.add(r2)
+# c.select_all()
+# c.close()
