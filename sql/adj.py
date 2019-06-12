@@ -35,7 +35,7 @@ class make_record():
                      store_id=None):
         return locals()
 
-    def make_score_kw(self, wine_id='auto',
+    def make_score_kw(self, wine_id=None,
                       appear_clarity=None,
                       appear_tone=None,
                       appear_pureness=None,
@@ -90,14 +90,23 @@ class wine():
         self.conn = sqlite3.connect(file)
         self.cursor = self.conn.cursor()
         base_keys = ['wine_id', 'wine_type', 'wine_num', 'store_id']
+        base_keys_CH = ['酒编号', '酒类型', '数量', '存储仓库编号']
         score_keys = ['wine_id', 'appear_clarity', 'appear_tone', 'appear_pureness',
                       'aroma_pureness', 'aroma_concentration', 'aroma_quality',
                       'taste_pureness', 'taste_concentration', 'taste_persistence', 'taste_quality']
+        score_keys_CH = ['酒编号', '外观澄清度', '外观色调', '外观纯正度',
+                         '香气纯正度', '香气浓度', '香气质量',
+                         '口感纯正度', '口感浓度', '口感持久性', '口感质量']
         store_keys = ['store_id', 'store_address',
                       'store_temperature', 'store_moisture']
+        store_keys_CH = ['仓库编号', '地址',
+                         '温度', '湿度']
         self.keys = {'score': score_keys,
                      'base': base_keys,
                      'store': store_keys}
+        self.keys_CH = {'score': score_keys_CH,
+                        'base': base_keys_CH,
+                        'store': store_keys_CH}
         try:
             self.cursor.execute('create table store\
                                 (\
@@ -207,6 +216,10 @@ class wine():
         self.cursor.execute("select * from " + table)
         return self.cursor.fetchall()
 
+    def select_com(self, command):
+        self.cursor.execute(command)
+        return self.cursor.fetchall()
+
     def close(self):
         print("Save done")
         self.cursor.close()
@@ -226,4 +239,11 @@ class wine():
 # c.add(r1)
 # c.add(r2)
 # c.select_all()
+# c.close()
+# c = wine()
+# temp = c.select_com("select store_id from store")
+# strlist = []
+# for i in temp:
+#     strlist.append(i[0])
+# print(strlist)
 # c.close()
